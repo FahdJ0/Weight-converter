@@ -1,18 +1,9 @@
-weight = float(input("Weight: "))
-what = input("(K)g or (L)bs: ")
-if what == 'l' or what == 'L':
-    converted = weight*0.45
-    print(f"You weight {converted} kilograms")
-    if converted > 100:
-        print("Consider starting a diet ! ")
-    elif converted < 40:
-        print("Don't skip breakfast !")
-    
+password = input("Enter a password: ")
+while len(password) < 8:
+    print("The password contains less than 8 caracters, rewrite one.")
+    password = input("Enter a longer password: ")
 
-elif what == 'k' or what == 'K':
-    converted = weight*2.2
-    print(f"You weight {converted} pounds")
-    if converted > 220:
-        print("Consider starting a diet !")
-    elif converted < 88:
-        print("Don't skip breakfast !")
+cpassword = input("The password you wrote is valid, confirm it: ")
+while cpassword != password:
+    cpassword = input("The second password is the same as the first one, retry: ")
+print("You comfirmed your password right")  
